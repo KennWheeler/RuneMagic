@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @Mod(modid = Main.MODID, version = Main.VERSION)
 
 public class Main {
-	public static final String MODID = "RuneMagic";
+	public static final String MODID = "runemagic";
 	public static final String VERSION = "0.0.1";
 	
 	public static Block runeEssenceBlock;
@@ -37,6 +37,11 @@ public class Main {
 		ModelResourceLocation runeEssenceBlockModel = new ModelResourceLocation("runemagic:runeEssenceBlock", "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssenceBlock, 0, runeEssenceBlockModel);
 		
+/*		Item runeEssence = GameRegistry.findItem("runemagic", "runeEssence");
+		ModelResourceLocation runeEssenceModel = new ModelResourceLocation("runemagic:runeEssence", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssence, 0, runeEssenceBlockModel);*/
+		
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssence, 0, new ModelResourceLocation(MODID+":"+"runeEssence", "inventory"));
 		GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 	}
 }
