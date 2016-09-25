@@ -4,6 +4,8 @@ import com.runemagic.forge.mods.ModBlocks.RuneEssenceBlock;
 import com.runemagic.forge.mods.ModItems.RuneEssence;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -26,6 +28,10 @@ public class Main {
 		
 		runeEssence = new RuneEssence();
 		GameRegistry.registerItem(runeEssence, "runeEssence");
+		
+		Item runeEssenceBlock = GameRegistry.findItem("runemagic", "runeEssenceBlock");
+		ModelResourceLocation runeEssenceBlockModel = new ModelResourceLocation("runemagic:runeEssenceBlock", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssenceBlock, 0, runeEssenceBlockModel);
 		
 		GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 	}

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "runemagic:blocks/runeEssenceBlock",
+        "up": "runemagic:blocks/runeEssenceBlock",
+        "north": "runemagic:blocks/runeEssenceBlock",
+        "south": "runemagic:blocks/runeEssenceBlock",
+        "west": "runemagic:blocks/runeEssenceBlock",
+        "east": "runemagic:blocks/runeEssenceBlock",
+        "particle": "runemagic:blocks/runeEssenceBlock"       
+    }
+}
