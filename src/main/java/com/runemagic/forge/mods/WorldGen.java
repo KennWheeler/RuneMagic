@@ -51,4 +51,5 @@ public class WorldGen implements IWorldGenerator{
 		int posZ = blockZPos + random.nextInt(maxZ);
 		new WorldGenMinable((IBlockState) block, maxVeinSize).generate(world, random, new BlockPos(posX, posY, posZ));
 		}
+	}
 }
