@@ -26,5 +26,7 @@ public class Main {
 		
 		runeEssence = new RuneEssence();
 		GameRegistry.registerItem(runeEssence, "runeEssence");
+		
+		GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 	}
 }

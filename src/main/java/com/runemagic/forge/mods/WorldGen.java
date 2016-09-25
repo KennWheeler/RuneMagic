@@ -35,7 +35,7 @@ public class WorldGen implements IWorldGenerator{
 	}
 	
 	private void generateSurface(World world,Random random, int x, int z){
-		this.addBlockSpawn(Main.runeEssenceBlock, world, random, x, z, 16, 16, 12, 1, 0, 32 );
+		this.addBlockSpawn(Main.runeEssenceBlock, world, random, x, z, 16, 16, 100, 1, 0, 100 );
 	}
 	
 	private void generateNether(World world,Random random, int x, int z){
