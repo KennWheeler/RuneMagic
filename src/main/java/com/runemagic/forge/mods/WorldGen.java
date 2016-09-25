@@ -17,7 +17,7 @@ public class WorldGen implements IWorldGenerator{
 			IChunkProvider chunkProvider) {
 		switch (world.provider.getDimension()){
 		case 0: //Overworld
-			
+			this.generateSurface(world, random, chunkX, chunkZ);
 			break;
 		case -1: //Nether
 			
@@ -35,19 +35,19 @@ public class WorldGen implements IWorldGenerator{
 	}
 	
 	private void generateSurface(World world,Random random, int x, int z){
-		this.addBlockSpawn(Main.runeEssenceBlock, world, random, x, z, 16, 16, 100, 1, 0, 100 );
+		this.addBlockSpawn(Main.runeEssenceBlock.getDefaultState(), world, random, x, z, 16, 16, 12, 75, 0, 100 );
 	}
 	
 	private void generateNether(World world,Random random, int x, int z){
 		
 	}
 	
-	public void addBlockSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY ){
+	public void addBlockSpawn(IBlockState block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY ){
 		for(int i = 0; i < chancesToSpawn; i++){
 		int posX = blockXPos + random.nextInt(maxX);
 		int posY = minY + random.nextInt(maxY -minY);
 		int posZ = blockZPos + random.nextInt(maxZ);
-		new WorldGenMinable((IBlockState) block, maxVeinSize).generate(world, random, new BlockPos(posX, posY, posZ));
+		new WorldGenMinable(block, maxVeinSize).generate(world, random, new BlockPos(posX, posY, posZ));
 		}
 	}
 }
