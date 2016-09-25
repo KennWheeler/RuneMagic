@@ -17,7 +17,7 @@ public class WorldGen implements IWorldGenerator{
 			IChunkProvider chunkProvider) {
 		switch (world.provider.getDimension()){
 		case 0: //Overworld
-			this.generateSurface(world, random, chunkX, chunkZ);
+			this.generateSurface(world, random, chunkX*16, chunkZ*16);
 			break;
 		case -1: //Nether
 			
@@ -35,7 +35,7 @@ public class WorldGen implements IWorldGenerator{
 	}
 	
 	private void generateSurface(World world,Random random, int x, int z){
-		this.addBlockSpawn(Main.runeEssenceBlock.getDefaultState(), world, random, x, z, 16, 16, 6, 75, 0, 100 );
+		this.addBlockSpawn(Main.runeEssenceBlock.getDefaultState(), world, random, x, z, 16, 16, 16, 128, 15, 160 );
 	}
 	
 	private void generateNether(World world,Random random, int x, int z){
