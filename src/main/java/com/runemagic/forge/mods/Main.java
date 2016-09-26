@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -43,5 +44,7 @@ public class Main {
 		
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssence, 0, new ModelResourceLocation(MODID+":"+"runeEssence", "inventory"));
 		GameRegistry.registerWorldGenerator(new WorldGen(), 0);
+		
+		//MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
 	}
 }
