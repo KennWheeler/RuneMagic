@@ -1,5 +1,5 @@
 {
-    "parent": "runemagic:blocks/runeEssenceBlock",
+    "parent": "runemagic:block/runeEssenceBlock",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
