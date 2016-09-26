@@ -26,7 +26,7 @@ public class Main {
 	public static Item runeEssence;
 
 	
-	@EventHandler
+/*	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		
 		Item runeEssenceBlock = GameRegistry.findItem("runemagic", "runeEssenceBlock");
@@ -36,10 +36,10 @@ public class Main {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssence, 0, new ModelResourceLocation(MODID+":"+"runeEssence", "inventory"));
 		GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 		
-		/*		Item runeEssence = GameRegistry.findItem("runemagic", "runeEssence");
+				Item runeEssence = GameRegistry.findItem("runemagic", "runeEssence");
 		ModelResourceLocation runeEssenceModel = new ModelResourceLocation("runemagic:runeEssence", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssence, 0, runeEssenceBlockModel);*/
-	}
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(runeEssence, 0, runeEssenceBlockModel);
+	}*/
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
