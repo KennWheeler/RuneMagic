@@ -21,8 +21,8 @@ public class Main {
 	public static final String VERSION = "0.0.1";
 	public static final String CLIENT_PROXY_CLASS = "com.runemagic.forge.mods.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.runemagic.forge.mods.proxy.CommonProxy";
-	public static Block runeEssenceBlock;
-	public static Item runeEssence;
+//	public static Block runeEssenceBlock;
+//	public static Item runeEssence;
 	public static final RuneMagicTab runeMagicTab = new RuneMagicTab("runeMagicTab");
 	
 	@SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS)
@@ -40,7 +40,7 @@ public class Main {
 	public void init(FMLInitializationEvent event)
 	{
 		proxy.registerRenders();
-//		GameRegistry.registerWorldGenerator(new WorldGen(),  0);
+		GameRegistry.registerWorldGenerator(new WorldGen(),  0);
 		//MinecraftForge.EVENT_BUS.register(new RenderGuiHandler());
 	}
 	

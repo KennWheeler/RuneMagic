@@ -2,7 +2,8 @@ package com.runemagic.forge.mods;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
+import com.runemagic.forge.mods.ModBlocks.RuneEssenceBlock;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -35,7 +36,7 @@ public class WorldGen implements IWorldGenerator{
 	}
 	
 	private void generateSurface(World world,Random random, int x, int z){
-		this.addBlockSpawn(Main.runeEssenceBlock.getDefaultState(), world, random, x, z, 16, 16, 16, 128, 15, 160 );
+		this.addBlockSpawn(RuneEssenceBlock.runeEssenceBlock.getDefaultState(), world, random, x, z, 16, 16, 16, 128, 15, 160 );
 	}
 	
 	private void generateNether(World world,Random random, int x, int z){
