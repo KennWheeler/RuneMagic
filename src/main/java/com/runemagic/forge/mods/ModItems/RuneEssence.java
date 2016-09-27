@@ -12,10 +12,8 @@ public class RuneEssence extends Item {
 	public static Item runeEssence;
 	public RuneEssence(){
 		super();
-		//this.setUnlocalizedName("runeEssence");
-		this.setCreativeTab(CreativeTabs.MATERIALS);
 	}
-//New stuff below
+
 	public static void init(){
 		runeEssence =  new Item().setUnlocalizedName("runeEssence").setCreativeTab(Main.runeMagicTab);
 	}
