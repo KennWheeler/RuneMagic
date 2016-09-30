@@ -3,6 +3,7 @@ package com.runemagic.forge.mods.ModBlocks;
 import java.util.Random;
 
 import com.runemagic.forge.mods.Main;
+import com.runemagic.forge.mods.Reference;
 import com.runemagic.forge.mods.ModItems.RuneEssence;
 
 import net.minecraft.block.Block;
@@ -16,7 +17,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class RuneEssenceBlock extends Block {
 	public RuneEssenceBlock(Material materialIn) {
 		super(materialIn);
-		// TODO Auto-generated constructor stub
+
 	}
 
 	private final String name = "runeEssenceBlock";
@@ -37,7 +38,7 @@ public class RuneEssenceBlock extends Block {
 	
 	public static void registerRender(Block block){
 		Item item = Item.getItemFromBlock(block);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Main.MODID + ":" + item.getUnlocalizedName().substring(5),"inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MODID + ":" + item.getUnlocalizedName().substring(5),"inventory"));
 
 	}
 	

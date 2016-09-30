@@ -1,12 +1,16 @@
 package com.runemagic.forge.mods.proxy;
 
+import com.runemagic.forge.init.ModItems;
 import com.runemagic.forge.mods.ModBlocks.RuneEssenceBlock;
-import com.runemagic.forge.mods.ModItems.RuneEssence;
 
-public class ClientProxy extends CommonProxy {
+public class ClientProxy implements CommonProxy {
+	
 	@Override
+	public void init(){
+		ModItems.registerRenders();
+
+	}
 	public void registerRenders(){
 		RuneEssenceBlock.registerRenders();
-		RuneEssence.registerRenders();
 	}
 }
